@@ -44,6 +44,7 @@ public class CarView extends VBox{
         //This Pane extends VBox so I can use "this" for styling CarView
         this.setAlignment(Pos.CENTER);
         this.setPadding(new Insets(20.0));
+        this.setSpacing(20);
         
         //Static method that adds margins just to node carTable
         VBox.setMargin(carTable, new Insets(20.0));

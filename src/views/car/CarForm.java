@@ -76,6 +76,8 @@ public class CarForm extends HBox{
         //Set CarForm Styles
         this.setAlignment(Pos.CENTER);
         this.setPadding(new Insets(20));
+        //Styling for form
+        this.setStyle("-fx-border-color: gray; -fx-border-width: 5px;" );
         
         // (JUST FOR CAR TABLE)
         vin.setEditable(false); 

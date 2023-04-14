@@ -4,7 +4,7 @@
  */
 package views.car;
 
-import javafx.beans.property.ReadOnlyObjectWrapper;
+
 import javafx.geometry.Pos;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
