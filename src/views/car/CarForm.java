@@ -16,8 +16,6 @@ import javafx.scene.layout.HBox;
  * @author AlexC
  */
 public class CarForm extends HBox{
-    // Grid Layout Reference
-    private final GridPane grid;
     
     // Textfields References
     private final TextField vin;
@@ -33,7 +31,7 @@ public class CarForm extends HBox{
     public CarForm(){
         
         //New GridPane
-        grid = new GridPane();
+        GridPane grid = new GridPane();
         
         //Grid Styles
         grid.setHgap(20.0);
