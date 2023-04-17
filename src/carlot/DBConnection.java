@@ -6,7 +6,6 @@ package carlot;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 
 /**
@@ -21,11 +20,6 @@ public class DBConnection {
     private static final String PASSWORD = "tiger";
     
     public static void dbConnect() throws SQLException, ClassNotFoundException{
-        
-        getConnection();
-    }
-    
-    private static void getConnection()throws SQLException, ClassNotFoundException{
         try{
             connection = DriverManager.getConnection(CONNECTION_STRING, USERNAME, PASSWORD);
         }catch (SQLException e) {
@@ -33,39 +27,8 @@ public class DBConnection {
             throw e;
         }
     }
-    
-    //DB Execute Query Operation
-    public static ResultSet dbExecuteQuery(String queryStmt)throws 
-            SQLException, ClassNotFoundException {
-          
-        try{
-            //Conect to DB
-            dbConnect();
-            
-            //Create connection statement and execute query with query statement
-            return connection.createStatement().executeQuery(queryStmt);
-            
-        } catch (SQLException e){
-            System.out.println("Problem occurred at executeQuery operation : " + e);
-            throw e;
-        }
-    }
-    
-    //DB Execute Update (For Update/Insert/Delete) Operation
-    public static void dbExecuteUpdate(String sqlStmt) throws 
-            SQLException, ClassNotFoundException {
-        
-        try{
-            //Donnec to DB
-            dbConnect();
-            
-            //Create connection statement and run executeUpdate with sql statement
-            connection.createStatement().executeUpdate(sqlStmt);
-            
-        } catch (SQLException e){
-            System.out.println("Problem occurred at executeUpdate operation : " + e);
-            throw e;
-        }
-        
+
+    public static Connection getConnection() {
+        return connection;
     }
 }

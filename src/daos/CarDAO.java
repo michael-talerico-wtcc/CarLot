@@ -5,77 +5,121 @@
 package daos;
 
 import carlot.DBConnection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import models.Car;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import models.Car;
+
 
 /**
  *
  * @author AlexC
  */
 public class CarDAO {
+    private static PreparedStatement preparedStatement;
+    private final static String SELECT_ALL_AVALIABLE_CARS_STMT = "SELECT * FROM car LEFT JOIN salesOrder ON car.vin = salesOrder.vin WHERE salesOrder.vin IS NULL;";
+    private final static String UPDATE_CAR_STMT = "UPDATE car SET year = ?, make = ?, model = ?, color = ?, mileage = ?, mpg = ?, salesPrice = ? WHERE vin = ?";
+    private final static String ADD_CAR_STMT = "INSERT INTO car (vin, year, make, model, color, mileage, mpg, salesPrice) VALUES (?, ?, ?, ?, ?, ?, ?, ?)"; 
     
+    
+    //GET CAR
     public static ObservableList<Car> getAllCars() throws 
             SQLException, ClassNotFoundException {
         
-        // Declare SELECT statement!!!!!!!!!!!!!Need to update when Purchase Orders in DB
-        String selectStmt = "SELECT * FROM car;";
-        
-        //Execute SELECT statement
         try{
-            //Get ResultSet from dbExecuteQuery method
-            ResultSet resultSet = DBConnection.dbExecuteQuery(selectStmt);
             
-            //Get list of ResultSet data
+            //Set up Connection
+            DBConnection.dbConnect();
+            
+            //Create Prepared Statement
+            preparedStatement = DBConnection.getConnection().prepareStatement(SELECT_ALL_AVALIABLE_CARS_STMT);
+            
+           //Get ResultSet from executeQuery method
+            ResultSet resultSet = preparedStatement.executeQuery();
+            
+            //Create List from ResultSet data
             ObservableList<Car> carList = createCarListFromResultSet(resultSet);
             
             // Return list
             return carList;
-            
         }catch (SQLException e){
-            System.out.println("SQL select operation has failed: " + e);
+            System.out.println("SQL car select operation has failed: " + e);
             //Return exception
             throw e;
         }
     }
     
-    // UPDATE A CAR
-    public static void updateCar(Car car)throws 
+    // UPDATE CAR
+    public static void updateCar(Car car) throws 
             SQLException, ClassNotFoundException {
-        
-        //Declare an UPDATE statement
-        String updateStmt = String.format("UPDATE car SET year = %d, make = '%s', "
-                + "model = '%s', color = '%s', "
-                + "mileage = %d, mpg = %d, "
-                + "salesPrice = %f WHERE vin = '%s';", 
-                 car.getYear(), car.getMake(), car.getModel(), 
-                 car.getColor(), car.getMileage(), car.getMpg(), 
-                 car.getSalesPrice(), car.getVin()); 
-        
+    
         try{
-            // Execute UPDATE statement
-            DBConnection.dbExecuteUpdate(updateStmt);
-            
-        } catch (SQLException e){
-            System.out.println("Received Error when attempting to update car with vin " +
-                    car.getVin() + " " + e);
-            
-            //Return exception
-            throw e;
+        
+        //Set up Connection
+        DBConnection.dbConnect();
+        
+        //Create Prepared Statement
+        preparedStatement = DBConnection.getConnection().prepareStatement(UPDATE_CAR_STMT);
+        
+        //Update Prepared Statement
+        preparedStatement.setString(1, car.getYear() + "");
+        preparedStatement.setString(2,car.getMake());
+        preparedStatement.setString(3, car.getModel());
+        preparedStatement.setString(4, car.getColor());
+        preparedStatement.setString(5, car.getMileage() + "");
+        preparedStatement.setString(6, car.getMpg() + "");
+        preparedStatement.setString(7, car.getSalesPrice() + "");
+        preparedStatement.setString(8, car.getVin());
+        
+        //Run Update
+        preparedStatement.executeUpdate();
+        
         }
-        
+        catch(SQLException e){
+        System.out.println("SQL car update operation has failed: " + e);
+        }
     }
+    
+    //ADD CAR
+    public static void addCar(Car car) throws SQLException, ClassNotFoundException{
+    
+        try{
+            
+            //Set up Connection
+            DBConnection.dbConnect();
+            
+            //Create Prepared Statement
+            preparedStatement = DBConnection.getConnection().prepareStatement(ADD_CAR_STMT);
+            
+            //Update Prepared Statement
+            preparedStatement.setString(1, car.getVin());
+            preparedStatement.setString(2, car.getYear() + "");
+            preparedStatement.setString(3,car.getMake());
+            preparedStatement.setString(4, car.getModel());
+            preparedStatement.setString(5, car.getColor());
+            preparedStatement.setString(6, car.getMileage() + "");
+            preparedStatement.setString(7, car.getMpg() + "");
+            preparedStatement.setString(8, car.getSalesPrice() + "");
         
-    //Use ResultSet to create and return list of cars
+            //Run Update
+            preparedStatement.executeUpdate();
+        
+        }catch(SQLException e){
+             System.out.println("SQL car insert operation has failed: " + e);
+        }
+   
+    
+    }
+    
+        
+    //Use ResultSet of 'GET CAR' to create and return list of cars
     private static ObservableList<Car> createCarListFromResultSet(ResultSet resultSet) 
             throws SQLException, ClassNotFoundException {
         
-        //Create ObservableList
         ObservableList<Car> carList = FXCollections.observableArrayList();
         
-        //Loop through the result set to get all the values
         while (resultSet.next()){ 
             String vin = resultSet.getString("vin");
             int year = resultSet.getInt("year");
@@ -86,13 +130,14 @@ public class CarDAO {
             int mpg = resultSet.getInt("mpg");
             double salesPrice = resultSet.getDouble("salesPrice");
             
-            //Create Car
             Car car = new Car(vin, year, make, model, color, mileage, mpg, salesPrice);
             
-            //Add car to list
             carList.add(car);
         }
-        //Return the list
         return carList;
     }
+    
+   
+    
+    
 }
