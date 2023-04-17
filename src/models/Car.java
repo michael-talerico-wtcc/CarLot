@@ -9,7 +9,7 @@ package models;
  * @author AlexC
  */
 public class Car {
-     private String vin;
+    private String vin;
     private int year;
     private String make;
     private String model;
