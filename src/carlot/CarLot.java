@@ -112,6 +112,41 @@ public class CarLot extends Application {
         //Car Cancel Button Clicked
         carView.getCancelBtn().setOnAction(e -> clearCarFormTextFields());
         
+        
+        //PurchaseOrder Add To Inventory Button Clicked
+            //Use textfield input to create purchase order
+            
+            //Use PurchaseOrder attributes to add car and purchaseOrder to db
+            
+            //Clear the Purchase Order Form textfields
+            
+            //Populate purchaseOrder table
+             
+        
+        //PurchaseOrder Cancel Button Clicked
+            //Clear the Purchase Order Form textfields
+            
+        
+        //SalesOrder Get Button Car Clicked
+            //Get value from vin textfield in salesOrderView
+            
+            //Use vin to get car info via CARDAO method
+            
+            //Use car into to fill salesOrder car TextFields
+            
+            
+         //SalesOrder Process Sale Button Clicked
+            //Use SalesOrder Textfield values to create new SalesOrder
+            
+            //Add salesOrder to db
+            
+            //Clear SalesOrder Form TextFields
+            
+            //Populate SalesOrder Table
+            
+         //SalesOrder Cancel Button Clicked
+            //Clear SalesOrder Form TextFields
+        
     }
     
      /**
@@ -161,7 +196,7 @@ public class CarLot extends Application {
         return car;
     }
     
-    // Update Car
+    // Update Car in DB
     private void updateCar(Car car){   
         try{
             CarDAO.updateCar(car);
@@ -170,7 +205,18 @@ public class CarLot extends Application {
         }    
     }
     
-    // Clear TextFields
+    //Add Car to DB
+   private void addCar(Car car){
+       try{
+           CarDAO.addCar(car);
+       }catch(SQLException | ClassNotFoundException e){
+           System.out.println("Error when attempting to add a car" + e);
+       }
+   
+   }
+    
+    
+    // Car Form Clear TextFields
     private void clearCarFormTextFields(){
         carView.getCarForm().getVin().clear();
         carView.getCarForm().getMake().clear();
