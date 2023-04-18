@@ -5,17 +5,21 @@
 package views.salesOrder;
 
 import javafx.scene.layout.HBox;
+import javafx.scene.control.DatePicker;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
 
 /**
  *
  * @author AlexC
  */
 public class SalesOrderForm extends HBox{
-    //Grid Layout Reference
     
-    //Textfield References
+    //Textfield References (vin, year, make, model, color, mileage, mpg, priceSold)
     
-    //DatePicker Reference (See notes below in "Add Labels and Textfields.." section)
+    //DatePicker Reference (dateSold)
     
     //Get Car Button Reference
     
@@ -27,26 +31,21 @@ public class SalesOrderForm extends HBox{
         
         //Grid Styles
     
-    
-         // Add Labels and Textfields to Grid with add(Node, col index, row index)
-         // Don't worry about adding any more styling than what is in the car form
-         // May want to put vin label, textfield and the button on Row 0, the 
-         // other car info on Row 1 and Row 2 - unless it can fit on one, and the
-         // date and price sold labels and textfields on Row 3. 
-         // For that Date, you can use a control called a "DatePicker" instead of textfield.
-         // DatePicker dateSold = new DatePicker();
-         
-         
-         
-         
-         //Add the grid to this pane
-         
-         //Set SalesOrderForm Styles
+        
+        // Add Labels and Textfields to Grid with add(Node, col index, row index)
+            // Row 0: vin label, vin Textfield, and Get Car Button
+            // Row 1: year label/textfield, make label/textfield, model label/textfield
+            // Row 2: color label/textfield, mileage label/textfield, mpg label/textfield
+            
+        //Add grid to this pane
+        
+        //DO NOT STYLE GER CAR BUTTON
+        
+        //Styles for this pane (padding at 20, create border)
         
     }
     
     //Getters for all Textfields, DatePicker, "Get Car Button"
     
-    
-    
+   
 }
