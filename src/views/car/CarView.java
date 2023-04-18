@@ -7,6 +7,7 @@ package views.car;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
@@ -23,6 +24,7 @@ public class CarView extends VBox{
     
     //Reference for each button
     private final Button updateBtn;
+    private final Button cancelBtn;
     
     //Constuctor with layout info
     public CarView(){
@@ -37,9 +39,19 @@ public class CarView extends VBox{
         //New CarForm
         carForm = new CarForm();
         
-        //New Update Button and Button Styling
-        updateBtn = new Button("Update");
+         //Create pane for buttons
+        HBox buttonPane = new HBox();
+        
+        //Add buttons to pane
+        buttonPane.getChildren().addAll(cancelBtn = new Button("Cancel"), updateBtn = new Button("Update"));
+        
+        //Style buttons
         updateBtn.setPrefWidth(150.0);
+        cancelBtn.setPrefWidth(150.0);
+        
+        //Style button pane
+        buttonPane.setSpacing(20);
+        buttonPane.setAlignment(Pos.CENTER);
         
         //This Pane extends VBox so I can use "this" for styling CarView
         this.setAlignment(Pos.CENTER);
@@ -50,7 +62,7 @@ public class CarView extends VBox{
         VBox.setMargin(carTable, new Insets(20.0));
     
         //Add to CarView
-        this.getChildren().addAll(title, carTable, carForm, updateBtn);
+        this.getChildren().addAll(title, carTable, carForm, buttonPane);
     
     }
 
@@ -66,4 +78,11 @@ public class CarView extends VBox{
     public Button getUpdateBtn() {
         return updateBtn;
     }
+
+    public Button getCancelBtn() {
+        return cancelBtn;
+    }
+    
+    
 }
+
