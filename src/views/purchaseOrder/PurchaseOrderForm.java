@@ -11,8 +11,7 @@ import javafx.scene.layout.HBox;
  * @author AlexC
  */
 public class PurchaseOrderForm extends HBox{
-    //Grid Layout Reference
-    
+   
     //Textfields References (cost, vin, year, make, model, mileage, mpg)
     
     //DatePicker Reference (datePurchased)
