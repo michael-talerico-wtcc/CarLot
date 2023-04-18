@@ -93,11 +93,20 @@ public class CarLot extends Application {
             this.populateCarTextFieldsWithSelectionData();
         });  
         
-        // Car Table Update Button Clicked
+        // Car Update Button Clicked
         carView.getUpdateBtn().setOnAction(e -> {
-            // Uses textfield input to update Contact in db
-            Car car = this.createCarFromTextFieldInput();
-            this.updateCar(car);
+            
+            // Uses textfield input to update Car in db
+            Car car = createCarFromTextFieldInput();
+            
+            //Use data to update car in db
+            updateCar(car);
+            
+            //Clear textfields
+            clearCarTableTextFields();
+            
+            //Refresh car table
+            populateCarTable();
         });  
         
     }
@@ -153,8 +162,6 @@ public class CarLot extends Application {
     private void updateCar(Car car){   
         try{
             CarDAO.updateCar(car);
-            this.populateCarTable();
-            this.clearCarTableTextFields();
         } catch (SQLException | ClassNotFoundException e){
             System.out.println("Error when attempting to update a contact and repopulate table " + e);
         }    
