@@ -38,9 +38,13 @@ public class SalesOrderForm extends HBox{
             // Row 2: color label/textfield, mileage label/textfield, mpg label/textfield
             // Row 3: dateSold label/DatePicker, priceSold label/textfield
             
+        //Make textfields year, make, model, color, mileage, mpg UNEDITABLE using following format:
+        // year.setEditable(false); 
+            
         //Add grid to this pane
         
-        //DO NOT STYLE GER CAR BUTTON
+        
+        //DO NOT STYLE GET CAR BUTTON
         
         //Styles for this pane (padding at 20, create border)
         
