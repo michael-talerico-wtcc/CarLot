@@ -103,11 +103,14 @@ public class CarLot extends Application {
             updateCar(car);
             
             //Clear textfields
-            clearCarTableTextFields();
+            clearCarFormTextFields();
             
             //Refresh car table
             populateCarTable();
         });  
+        
+        //Car Cancel Button Clicked
+        carView.getCancelBtn().setOnAction(e -> clearCarFormTextFields());
         
     }
     
@@ -168,7 +171,7 @@ public class CarLot extends Application {
     }
     
     // Clear TextFields
-    private void clearCarTableTextFields(){
+    private void clearCarFormTextFields(){
         carView.getCarForm().getVin().clear();
         carView.getCarForm().getMake().clear();
         carView.getCarForm().getModel().clear();
