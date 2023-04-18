@@ -36,6 +36,7 @@ public class SalesOrderForm extends HBox{
             // Row 0: vin label, vin Textfield, and Get Car Button
             // Row 1: year label/textfield, make label/textfield, model label/textfield
             // Row 2: color label/textfield, mileage label/textfield, mpg label/textfield
+            // Row 3: dateSold label/DatePicker, priceSold label/textfield
             
         //Add grid to this pane
         
