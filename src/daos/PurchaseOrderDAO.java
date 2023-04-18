@@ -19,9 +19,9 @@ import java.sql.Date;
  * @author AlexC
  */
 public class PurchaseOrderDAO {
-    //Attribute Prepared Statement
-    //Attribute Get all Purchase Orders SQL statement (will need to join with car table to get all needed info)
-    //Attribute Insert Purchase Order Stmt
+    //Reference for Prepared Statement
+    //Reference for Get all Purchase Orders SQL statement (will need to join with car table to get all needed info)
+    //Reference for Insert Purchase Order Stmt
     
    //GET PURCHASE ORDERS
     

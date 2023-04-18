@@ -11,7 +11,7 @@ import javafx.scene.layout.VBox;
  * @author AlexC
  */
 public class PurchaseOrderView extends VBox{
-    //Attributes PurchaseOrderTable purchaseOrderTable, PurchaseOrderForm purchaseOrderForm,
+    //References PurchaseOrderTable purchaseOrderTable, PurchaseOrderForm purchaseOrderForm,
         //TextField salesPrice, Button addToInventoryBtn, Button cancelBtn
     
     //Constructor

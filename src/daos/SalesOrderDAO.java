@@ -20,9 +20,9 @@ import javafx.collections.FXCollections;
  * @author AlexC
  */
 public class SalesOrderDAO {
-    //Attribute Prepared Statement
-    //Attribute Select all SalesOrder SQL Statement (Will need to join with car table to get all info)
-    //Attribute Insert SalesOrder SQL Statement
+    //Reference for Prepared Statement
+    //Reference for Select all SalesOrder SQL Statement (Will need to join with car table to get all info)
+    //Reference for Insert SalesOrder SQL Statement
     
     
     //GET ALL SALES ORDERS
