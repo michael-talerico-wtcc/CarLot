@@ -230,7 +230,7 @@ public class CarLot extends Application {
     
     //PURCHASE ORDER TABLE RELATED
     
-     //private void populatePurchaseOrderTable(){
+    //private void populatePurchaseOrderTable(){
         //try{
             //Use PurchaseOrder DAO to get list of purchase orders from db
             //purchaseOrderView.getPurchaseOrderTable().getTable().setItems(PurchaseOrderDAO.getAllPurchaseOrders());
@@ -239,6 +239,12 @@ public class CarLot extends Application {
         //}
     
     //}
+    
+    //private PurchaseOrder createPurchaseOrderFromTextFields(){}
+    
+    //private void addPurchaseOrder(PurchaseOrder purchaseOrder){}
+    
+    //private void clearPurchaseOrderFormTextFields(){}
     
     
     //SALES ORDER TABLE RELATED
@@ -253,7 +259,13 @@ public class CarLot extends Application {
     
     //}
     
+    //private void populateSalesOrderFormCarInfoTextFields(Car car){}
     
+    //private SalesOrder createSalesOrderFromTextFields(){}
+    
+    //private void addSalesOrder(SalesOrder salesOrder){}
+    
+    //private void clearSalesOrderTextFields90{}
     
     
     public static void main(String[] args) {
