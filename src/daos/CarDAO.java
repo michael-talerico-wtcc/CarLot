@@ -118,8 +118,10 @@ public class CarDAO {
     private static ObservableList<Car> createCarListFromResultSet(ResultSet resultSet) 
             throws SQLException, ClassNotFoundException {
         
+        //Create List
         ObservableList<Car> carList = FXCollections.observableArrayList();
         
+        //Loop through ResultSet and create local variables
         while (resultSet.next()){ 
             String vin = resultSet.getString("vin");
             int year = resultSet.getInt("year");
@@ -130,10 +132,13 @@ public class CarDAO {
             int mpg = resultSet.getInt("mpg");
             double salesPrice = resultSet.getDouble("salesPrice");
             
+            //Create car with variables
             Car car = new Car(vin, year, make, model, color, mileage, mpg, salesPrice);
             
+            //Add car to List
             carList.add(car);
         }
+        //Return List
         return carList;
     }
     
