@@ -79,6 +79,14 @@ public class CarLot extends Application {
          * EVENTS
          */
         
+         //Inventory Tab Clicked
+        carTab.selectedProperty().addListener((observable, oldValue, newValue) -> {
+            if(newValue){
+                populateCarTable();
+            }
+        });
+
+
         // Car Table Row Clicked
         carView.getCarTable().getTable().setOnMouseClicked(e -> {
             // Display attributes of car whose table row was selected in textfields
