@@ -4,10 +4,20 @@
  */
 package models;
 
+import java.time.LocalDate;
+
 /**
  *
- * @author AlexC
+ * @author 
  */
 public class SalesOrder {
+    //Attributes int id, LocalDate dateSold, Car car, double priceSold
+    
+    //Constructor
+    
+    //Getters and Setters
+    
+    //ToString
+    
     
 }
