@@ -25,7 +25,7 @@ public class PurchaseOrderDAO {
     //Reference for Insert Purchase Order Stmt
     
    //GET PURCHASE ORDERS
-    //public static ObservableList<Car> getAllCars() throws 
+    //public static ObservableList<PurchaseOrder> getAllPurchaseOrderes() throws 
             //SQLException, ClassNotFoundException {
         
         //try{
@@ -52,8 +52,8 @@ public class PurchaseOrderDAO {
     //}
    
     
-    //ADD PURCHASE ORDER
-   // public static void addCar(Car car) throws SQLException, ClassNotFoundException{
+   //ADD PURCHASE ORDER
+   // public static void addPurchaseOrder(PurchaseOrder purchaseOrder) throws SQLException, ClassNotFoundException{
     
         //try{
             
@@ -64,7 +64,7 @@ public class PurchaseOrderDAO {
            
             
             //Update Prepared Statement
-                // When updating the preparedStatement with the datePurchased you the following format
+                // When updating the preparedStatement with the datePurchased you use the following format
                 // preparedStatement.setString(2, Date.valueOf(purchaseOrder.getDatePurchased()) + "");
         
             //Run Update
@@ -78,21 +78,20 @@ public class PurchaseOrderDAO {
        
     
        
-            
-    
-       
-    
 
     //Use ResultSet from 'GET PURCHASE ORDERS' to create and return list of purachaseOrders 
-     
+     //private static ObservableList<PurchaseOrder> createPurchaseOrderListFromResultSet(ResultSet resultSet) 
+            //throws SQLException, ClassNotFoundException {
+        
         //Create ObservableList
-    
-        //Loop through resultSet and assignment attributes to local variables: 
-            // int id, datePurchased (see note below on how to do that one), cost, vin
+        
+        
+        //Loop through ResultSet and create local variables:
+        // int id, datePurchased (see note below on how to do that one), cost, vin
             // int year, make, model, color, int mileage, int mpg, double salesPrice
                 //What to do to convert SQL date in Result Date to LocalDate 
                 //LocalDate datePurchased = resultSet.getDate("datePurchased").toLocalDate();
-    
+            
             //Create car with local variables 
                 //constructor: Car(vin, year, make model, color, mileage, mpg, salesPrice) 
     
@@ -100,9 +99,11 @@ public class PurchaseOrderDAO {
                 //constructor: PurchaseOrder(id, datePurchased, car, cost)
     
             //Add PurchaseOrder To List
-    
-            
-        //Return list
+        
+     
+        //Return List
+        
+    //}
     
     
     }
