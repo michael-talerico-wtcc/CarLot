@@ -53,20 +53,39 @@ public class PurchaseOrderDAO {
    
     
     //ADD PURCHASE ORDER
+   // public static void addCar(Car car) throws SQLException, ClassNotFoundException{
     
-        //Set up Connection
+        //try{
+            
+            //Set up Connection
+           
+            
+            //Create Prepared Statement
+           
+            
+            //Update Prepared Statement
+                // When updating the preparedStatement with the datePurchased you the following format
+                // preparedStatement.setString(2, Date.valueOf(purchaseOrder.getDatePurchased()) + "");
+        
+            //Run Update
+            
+        
+        //}catch(SQLException e){
+             
+        //}
+   
+    //}
+       
     
-        //Create Prepared Statement
+       
+            
     
-        //Update Prepared Statement
-            // When updating the preparedStatement with the datePurchased you the following format
-            // preparedStatement.setString(2, Date.valueOf(purchaseOrder.getDatePurchased()) + "");
+       
     
-        //Run Update
 
     //Use ResultSet from 'GET PURCHASE ORDERS' to create and return list of purachaseOrders 
      
-        //Create List
+        //Create ObservableList
     
         //Loop through resultSet and assignment attributes to local variables: 
             // int id, datePurchased (see note below on how to do that one), cost, vin
