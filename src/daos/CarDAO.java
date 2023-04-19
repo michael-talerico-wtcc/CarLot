@@ -46,7 +46,7 @@ public class CarDAO {
             return carList;
         }catch (SQLException e){
             System.out.println("SQL car select operation has failed: " + e);
-            //Return exception
+            //Throw exception
             throw e;
         }
     }
