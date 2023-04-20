@@ -15,10 +15,24 @@ public class SalesOrderView extends VBox{
     
     //References for Button processSaleBtn and Button cancelBtn
     
+    //Reference for error message Text
+    
     
     //Constructor
     
-        //Title
+        //Create Title
+    
+        //Create new SalesOrderTable for Reference
+    
+        //Create new SalesOrderForm for Reference
+    
+        //Create HBox for error message text
+    
+        //Set styles for error message HBOX (alignment - center)
+    
+        //Create Text object for error message
+    
+        //Set Text styles(Font(Arial, BOLD, 13), Fill(Color is red), Stroke(Color is red))
     
         //Create HBox for Buttons
     
@@ -28,14 +42,12 @@ public class SalesOrderView extends VBox{
     
         //HBox styling (spacing 20 and alignment center)
     
-        //Create new SalesOrderTable for Reference
+        
     
-        //Create new SalesOrderForm for Reference
-    
-        //Add to this pane title, salesOrderTable, salesOrderForm, buttonPane
+        //Add to this pane title, salesOrderTable, errorMessagePane, salesOrderForm, buttonPane
     
     
-    //Getters for the form, table, and buttons
+    //Getters for the form, table, buttons, text
     
     
     
