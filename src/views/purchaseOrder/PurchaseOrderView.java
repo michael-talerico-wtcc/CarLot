@@ -51,7 +51,7 @@ public class PurchaseOrderView extends VBox{
        
         //Set Styles for This Pane
     
-        //Add title, table, form, and salesPrice/ButtonPane
+        //Add title, table, errorMessagePane, form, and salesPrice/ButtonPane to this pane
     
     
     //Create Getters for Table, Form, Buttons, and TextField, Text
