@@ -18,10 +18,10 @@ public class SalesOrder {
     private double priceSold;
 
     //Constructor
-    SalesOrder(){
+   public SalesOrder(){
 
     }
-    SalesOrder(int id, LocalDate dateSold, Car car, double priceSold){
+    public SalesOrder(int id, LocalDate dateSold, Car car, double priceSold){
     this.id = id;
     this.dateSold = dateSold;
     this.car = car;
