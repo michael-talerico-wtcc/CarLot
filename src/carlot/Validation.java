@@ -19,6 +19,8 @@ public class Validation {
             return "";
         }
         
+    //public static String validateVINLength(String vin){vin length should be 17}    
+    
     //public static String validateMileageValue(int mileage){needs to be above 0 and below 400,000} 
     
     //public static String validateMpgValue(int mpg){needs to be above -1 (0 for electric car) and below 60}
