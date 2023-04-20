@@ -21,7 +21,7 @@ public class PurchaseOrderView extends VBox{
     
     
     //Constructor
-    
+    public PurchaseOrderView(){
         //Create Title
     
         //Create PurchaseOrderTable for the Attribute Reference
@@ -52,8 +52,9 @@ public class PurchaseOrderView extends VBox{
         //Set Styles for This Pane
     
         //Add title, table, errorMessagePane, form, and salesPrice/ButtonPane to this pane
-    
-    
+   
+    }
+        
     //Create Getters for Table, Form, Buttons, and TextField, Text
     
 }
