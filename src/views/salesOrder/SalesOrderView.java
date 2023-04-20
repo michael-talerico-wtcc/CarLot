@@ -19,6 +19,7 @@ public class SalesOrderView extends VBox{
     
     
     //Constructor
+    public SalesOrderView(){
     
         //Create Title
     
@@ -41,15 +42,15 @@ public class SalesOrderView extends VBox{
         //Style buttons (prefWidth is 150)
     
         //HBox styling (spacing 20 and alignment center)
-    
-        
+  
     
         //Add to this pane title, salesOrderTable, errorMessagePane, salesOrderForm, buttonPane
     
+      
+    }
     
+  
     //Getters for the form, table, buttons, text
-    
-    
-    
+  
     
 }
