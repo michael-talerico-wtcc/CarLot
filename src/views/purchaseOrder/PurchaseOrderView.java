@@ -28,6 +28,7 @@ public class PurchaseOrderView extends VBox{
     
         //Create PurchaseOrderForm for the Attribute Reference
     
+        
         //Create HBox for error message Text
     
         //Set error message HBox Styles (alignment - center)
@@ -38,23 +39,26 @@ public class PurchaseOrderView extends VBox{
     
         //Add Text to error message HBox
     
-        //Create HBox for CarLot SalesPrice TextField and the two Buttons
+        
+        //Create HBox for the CarLot SalesPrice Label, SalesPrice TextField, and the two Buttons
     
-        //Add Label, salesPrice TextField, addToInventoryBtn, and cancelBtn to the
+        //Add CarLot Sales Price Label, salesPrice TextField, addToInventoryBtn, and cancelBtn to the
         // HBox
     
         //Button Styles (PrefWidth - 150)
     
-    
+   
         //HBox Style (Spacing is 20)
     
        
-        //Set Styles for This Pane
+        
+        //Set Styles for This Pane(Alignment - Center, Padding - new Insets 20, spacing - 20)
     
+        
         //Add title, table, errorMessagePane, form, and salesPrice/ButtonPane to this pane
    
     }
         
-    //Create Getters for Table, Form, Buttons, and TextField, Text
+    //Create Getters for Table, Form, Buttons, TextField, Text
     
 }
