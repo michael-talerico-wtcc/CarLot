@@ -79,10 +79,7 @@ public class CarView extends VBox{
         this.setAlignment(Pos.CENTER);
         this.setPadding(new Insets(20.0));
         this.setSpacing(20);
-        
-        //Static method that adds margins just to node carTable
-        VBox.setMargin(carTable, new Insets(20.0));
-    
+            
         //Add to CarView
         this.getChildren().addAll(title, carTable, carForm, buttonPane);
     
