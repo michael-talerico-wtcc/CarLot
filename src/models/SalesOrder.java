@@ -8,8 +8,8 @@ import java.time.LocalDate;
 
 /**
  *
- * @author 
- *// // Nate completed SalesOrder please contact me if there is error ///ncleach@my.waketech.edu///
+ * @author Nate
+ */
 public class SalesOrder {
     //Attributes int id, LocalDate dateSold, Car car, double priceSold
     private int id;

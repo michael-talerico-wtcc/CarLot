@@ -8,7 +8,7 @@ import java.time.LocalDate;
 
 /**
  *
- * @author AlexC
+ * @author Nate
  */
 public class PurchaseOrder {
     //Attributes int id, LocalDate datePurchased, Car car, double cost
