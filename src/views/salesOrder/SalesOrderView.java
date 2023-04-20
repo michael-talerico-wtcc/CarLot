@@ -27,6 +27,7 @@ public class SalesOrderView extends VBox{
     
         //Create new SalesOrderForm for Reference
     
+        
         //Create HBox for error message text
     
         //Set styles for error message HBOX (alignment - center)
@@ -35,9 +36,10 @@ public class SalesOrderView extends VBox{
     
         //Set Text styles(Font(Arial, BOLD, 13), Fill(Color is red), Stroke(Color is red))
     
-        //Create HBox for Buttons
+        
+        //Create HBox for Buttons:processSaleBtn and cancelBtn
     
-        //Add buttons to HBox
+        //Add the buttons to HBox
     
         //Style buttons (prefWidth is 150)
     
