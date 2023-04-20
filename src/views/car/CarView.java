@@ -9,6 +9,7 @@ import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
@@ -26,6 +27,9 @@ public class CarView extends VBox{
     private final Button updateBtn;
     private final Button cancelBtn;
     
+    //Reference for error msg Text
+    private Text errorMessage;
+    
     //Constuctor with layout info
     public CarView(){
         
@@ -39,6 +43,24 @@ public class CarView extends VBox{
         //New CarForm
         carForm = new CarForm();
         
+        //Create HBox for for error message text
+        HBox errorMessagePane = new HBox();
+        
+        //Set error pane styles (alignment)
+        errorMessagePane.setAlignment(Pos.CENTER);
+        
+        //Create Text for error message
+        errorMessage = new Text();
+        
+        //Set Text styles(Font, Fill, Stroke)
+        errorMessage.setFont(Font.font("Arial, FontWeight.BOLD, 13"));
+        errorMessage.setFill(Color.RED);
+        errorMessage.setStroke(Color.RED);
+        
+        //Add Text to error Pane
+        errorMessagePane.getChildren().add(errorMessage);
+        
+      
          //Create pane for buttons
         HBox buttonPane = new HBox();
         
@@ -82,7 +104,10 @@ public class CarView extends VBox{
     public Button getCancelBtn() {
         return cancelBtn;
     }
-    
+
+    public Text getErrorMessage() {
+        return errorMessage;
+    }
     
 }
 
