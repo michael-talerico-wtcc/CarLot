@@ -43,7 +43,7 @@ public class SalesOrder {
         return priceSold;
     }
     //Setters
-    public void setDateSold(){
+    public void setDateSold(LocalDate dateSold){
         this.dateSold = dateSold;
     }
     public void setId(int id){
