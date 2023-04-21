@@ -34,7 +34,7 @@ public class PurchaseOrder {
         return id;
     }
 
-    public LocalDate getDate(){
+    public LocalDate getDatePurchased(){
         return datePurchased;
     }
     public Car getCar(){
@@ -43,8 +43,11 @@ public class PurchaseOrder {
     public double getCost(){
         return cost;
     }
-    
-    
+
+    public void setDatePurchased(LocalDate datePurchased){
+        this.datePurchased = datePurchased;
+    }
+
     public void setId(int id){
         this.id =id;
     }

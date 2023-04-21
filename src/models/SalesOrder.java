@@ -8,8 +8,10 @@ import java.time.LocalDate;
 
 /**
  *
+
  * @author Nate
  */
+
 public class SalesOrder {
     //Attributes int id, LocalDate dateSold, Car car, double priceSold
     private int id;
@@ -18,10 +20,12 @@ public class SalesOrder {
     private double priceSold;
 
     //Constructor
-    SalesOrder(){
+
+   public SalesOrder(){
 
     }
-    SalesOrder(int id, LocalDate dateSold, Car car, double priceSold){
+    
+    public SalesOrder(int id, LocalDate dateSold, Car car, double priceSold){
     this.id = id;
     this.dateSold = dateSold;
     this.car = car;
@@ -43,6 +47,11 @@ public class SalesOrder {
         return priceSold;
     }
     //Setters
+
+    public void setDateSold(LocalDate dateSold){
+        this.dateSold = dateSold;
+    }
+
     public void setId(int id){
         this.id = id;
     }
@@ -60,3 +69,4 @@ public class SalesOrder {
     }
     
 }
+
