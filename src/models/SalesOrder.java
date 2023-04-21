@@ -43,6 +43,9 @@ public class SalesOrder {
         return priceSold;
     }
     //Setters
+    public void setDateSold(){
+        this.dateSold = dateSold;
+    }
     public void setId(int id){
         this.id = id;
     }
