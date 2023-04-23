@@ -4,7 +4,8 @@
  */
 package views.salesOrder;
 
-import javafx.scene.layout.HBox;
+import javafx.geometry.Insets;
+import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
